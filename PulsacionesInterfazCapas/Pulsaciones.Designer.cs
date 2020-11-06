@@ -1,6 +1,6 @@
 ﻿namespace PulsacionesInterfazCapas
 {
-    partial class Form1
+    partial class Pulsaciones
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -59,6 +59,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.TxtCampo = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtgTodos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,22 +149,22 @@
             this.DtgTodos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgTodos.Location = new System.Drawing.Point(24, 253);
             this.DtgTodos.Name = "DtgTodos";
-            this.DtgTodos.Size = new System.Drawing.Size(240, 150);
+            this.DtgTodos.Size = new System.Drawing.Size(559, 150);
             this.DtgTodos.TabIndex = 9;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(134, 218);
+            this.button1.Location = new System.Drawing.Point(109, 218);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Consultar";
+            this.button1.Text = "Consultar Todos";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(224, 218);
+            this.button2.Location = new System.Drawing.Point(449, 218);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 11;
@@ -172,7 +174,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(237, 21);
+            this.button3.Location = new System.Drawing.Point(225, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 12;
@@ -182,17 +184,17 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(432, 43);
+            this.button4.Location = new System.Drawing.Point(390, 38);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(134, 23);
             this.button4.TabIndex = 13;
-            this.button4.Text = "Buscar";
+            this.button4.Text = "Buscar por Id";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(614, 284);
+            this.button5.Location = new System.Drawing.Point(723, 258);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 15;
@@ -203,7 +205,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(495, 203);
+            this.label6.Location = new System.Drawing.Point(611, 199);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 16;
@@ -217,14 +219,14 @@
             "SELECCIONE",
             "Nombre",
             "Edad"});
-            this.CmbModificar.Location = new System.Drawing.Point(578, 197);
+            this.CmbModificar.Location = new System.Drawing.Point(677, 196);
             this.CmbModificar.Name = "CmbModificar";
             this.CmbModificar.Size = new System.Drawing.Size(121, 21);
             this.CmbModificar.TabIndex = 17;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(432, 117);
+            this.button6.Location = new System.Drawing.Point(419, 67);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 18;
@@ -242,47 +244,47 @@
             // LbnlIdentificacion
             // 
             this.LbnlIdentificacion.AutoSize = true;
-            this.LbnlIdentificacion.Location = new System.Drawing.Point(731, 19);
+            this.LbnlIdentificacion.Location = new System.Drawing.Point(734, 19);
             this.LbnlIdentificacion.Name = "LbnlIdentificacion";
-            this.LbnlIdentificacion.Size = new System.Drawing.Size(35, 13);
+            this.LbnlIdentificacion.Size = new System.Drawing.Size(10, 13);
             this.LbnlIdentificacion.TabIndex = 20;
-            this.LbnlIdentificacion.Text = "label7";
+            this.LbnlIdentificacion.Text = ".";
             // 
             // LblNombres
             // 
             this.LblNombres.AutoSize = true;
             this.LblNombres.Location = new System.Drawing.Point(734, 55);
             this.LblNombres.Name = "LblNombres";
-            this.LblNombres.Size = new System.Drawing.Size(35, 13);
+            this.LblNombres.Size = new System.Drawing.Size(10, 13);
             this.LblNombres.TabIndex = 21;
-            this.LblNombres.Text = "label8";
+            this.LblNombres.Text = ".";
             // 
             // LblEdad
             // 
             this.LblEdad.AutoSize = true;
-            this.LblEdad.Location = new System.Drawing.Point(731, 85);
+            this.LblEdad.Location = new System.Drawing.Point(734, 85);
             this.LblEdad.Name = "LblEdad";
-            this.LblEdad.Size = new System.Drawing.Size(35, 13);
+            this.LblEdad.Size = new System.Drawing.Size(10, 13);
             this.LblEdad.TabIndex = 22;
-            this.LblEdad.Text = "label9";
+            this.LblEdad.Text = ".";
             // 
             // LblSexo
             // 
             this.LblSexo.AutoSize = true;
-            this.LblSexo.Location = new System.Drawing.Point(728, 122);
+            this.LblSexo.Location = new System.Drawing.Point(734, 122);
             this.LblSexo.Name = "LblSexo";
-            this.LblSexo.Size = new System.Drawing.Size(41, 13);
+            this.LblSexo.Size = new System.Drawing.Size(10, 13);
             this.LblSexo.TabIndex = 23;
-            this.LblSexo.Text = "label10";
+            this.LblSexo.Text = ".";
             // 
             // LblPulsacion
             // 
             this.LblPulsacion.AutoSize = true;
             this.LblPulsacion.Location = new System.Drawing.Point(734, 151);
             this.LblPulsacion.Name = "LblPulsacion";
-            this.LblPulsacion.Size = new System.Drawing.Size(41, 13);
+            this.LblPulsacion.Size = new System.Drawing.Size(10, 13);
             this.LblPulsacion.TabIndex = 24;
-            this.LblPulsacion.Text = "label11";
+            this.LblPulsacion.Text = ".";
             // 
             // label12
             // 
@@ -340,16 +342,38 @@
             // 
             // TxtCampo
             // 
-            this.TxtCampo.Location = new System.Drawing.Point(589, 238);
+            this.TxtCampo.Location = new System.Drawing.Point(698, 232);
             this.TxtCampo.Name = "TxtCampo";
             this.TxtCampo.Size = new System.Drawing.Size(100, 20);
             this.TxtCampo.TabIndex = 31;
             // 
-            // Form1
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(215, 218);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(97, 23);
+            this.button7.TabIndex = 32;
+            this.button7.Text = "Filtrar Mejeres";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(325, 218);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(118, 23);
+            this.button8.TabIndex = 33;
+            this.button8.Text = "Filtrar Hombres";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // Pulsaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 431);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.TxtCampo);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label12);
@@ -381,7 +405,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Pulsaciones";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.DtgTodos)).EndInit();
             this.ResumeLayout(false);
@@ -422,6 +446,8 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox TxtCampo;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 

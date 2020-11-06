@@ -12,10 +12,10 @@ using BLL;
 
 namespace PulsacionesInterfazCapas
 {
-    public partial class Form1 : Form
+    public partial class Pulsaciones : Form
     {
         PesonaService personaService;
-        public Form1()
+        public Pulsaciones()
         {
             InitializeComponent();
             personaService = new PesonaService();
@@ -207,6 +207,25 @@ namespace PulsacionesInterfazCapas
         private void DvgConsultar_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            BuscarMujeres();
+        }
+
+        private void BuscarMujeres()
+        {
+            DtgTodos.DataSource = personaService.Mujeres();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            BuscarHombres();
+        }
+        private void BuscarHombres()
+        {
+            DtgTodos.DataSource = personaService.Hombres();
         }
     }
 }

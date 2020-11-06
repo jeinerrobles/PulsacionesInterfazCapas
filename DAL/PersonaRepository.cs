@@ -24,6 +24,17 @@ namespace DAL
         {
             return _personas;
         }
+
+
+        public List<Persona> Mujeres()
+        {
+            return _personas.Where(p => p.Sexo.Equals("F")).ToList();
+        }
+
+        public List<Persona> Hombres()
+        {
+            return _personas.Where(p => p.Sexo.Equals("M")).ToList();
+        }
         public int ValidarExiste(string identificacion)
         {
             return _personas.Where(p => p.Identificacion.Equals(identificacion)).Count();

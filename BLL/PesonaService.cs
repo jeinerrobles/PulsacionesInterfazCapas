@@ -49,54 +49,20 @@ namespace BLL
             _repositorio.Modificar(persona);
         }
 
+        public List<Persona> Mujeres()
+        {
+            return _repositorio.Mujeres();
+        }
+
+        public List<Persona> Hombres()
+        {
+            return _repositorio.Hombres();
+        }
+
         public void EliminarPersona(string identificacion)
         {
             _repositorio.EliminarPersona(identificacion);
         }
-        /*public string Eliminar(string identificacion)
-        {
-            try
-            {
-                _conexion.Open();
-                var persona = _repositorio.BuscarPorIdentificacion(identificacion);
-                if (persona != null)
-                {
-                    _repositorio.Eliminar(persona);
-                    _conexion.Close();
-                    return ($"El registro {persona.Nombre} se ha eliminado satisfactoriamente.");
-                }
-                else
-                {
-                    return ($"Lo sentimos, {identificacion} no se encuentra registrada.");
-                }
-            }
-            catch (Exception e)
-            {
-
-                return $"Error de la Aplicación: {e.Message}";
-            }
-            finally { _conexion.Close(); }
-
-        }
-        public Persona BuscarxIdentificacion(string identificacion)
-        {
-            _conexion.Open();
-            Persona persona = _repositorio.BuscarPorIdentificacion(identificacion);
-            _conexion.Close();
-            return persona;
-        }
-        public int Totalizar()
-        {
-            return _repositorio.Totalizar();
-        }
-        public int TotalizarMujeres()
-        {
-            return _repositorio.TotalizarMujeres();
-        }
-        public int TotalizarHombres()
-        {
-            return _repositorio.TotalizarHombres();
-        }*/
     }
     public class GuardarPersonaResponse
     {
