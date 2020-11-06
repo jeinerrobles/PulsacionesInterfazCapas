@@ -46,6 +46,13 @@ namespace DAL
             Persona personaEncontrada = ConsultarPersona(identificacion);
             _personas.Remove(personaEncontrada);
         }
+
+        public void Modificar( Persona persona)
+        {
+            EliminarPersona(persona.Identificacion);
+            persona.CalcularPulsaciones();
+            _personas.Add(persona);
+        }
        
         public int TotalizarHombres()
         {

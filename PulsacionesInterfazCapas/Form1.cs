@@ -108,9 +108,48 @@ namespace PulsacionesInterfazCapas
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            ValidarModificar();
         }
 
+        private void ValidarModificar()
+        {
+            if(CmbModificar.SelectedIndex == 0)
+            {
+                MessageBox.Show("Seleccione el campo a modificar.");
+            }
+            else
+            {
+                if(TxtCampo.Text.Trim() == "")
+                {
+                    MessageBox.Show("Dijite el campo a modificar.");
+                }
+                else
+                {
+                    Modificar();
+                }
+            }
+        }
+
+
+        private void Modificar()
+        {
+            Persona persona = personaService.ConsultarPersona(LbnlIdentificacion.Text);
+            switch (CmbModificar.SelectedItem)
+            {
+                case "Nombre":
+                    persona.Nombre = TxtCampo.Text.Trim();
+                    break;
+                case "Edad":
+                    persona.Edad = int.Parse(TxtCampo.Text.Trim());
+                    break;
+            }
+            personaService.Modificar(persona);
+            LblEdad.Text = persona.Edad.ToString();
+            LblNombres.Text = persona.Nombre;
+            LblPulsacion.Text = persona.Pulsacion.ToString();
+            LblSexo.Text = persona.Sexo;
+            LbnlIdentificacion.Text = persona.Identificacion;
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             ValidarBuscar();

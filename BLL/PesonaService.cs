@@ -44,6 +44,11 @@ namespace BLL
             return _repositorio.ConsultarPersona(identificaion);
         }
 
+        public void Modificar(Persona persona)
+        {
+            _repositorio.Modificar(persona);
+        }
+
         public void EliminarPersona(string identificacion)
         {
             _repositorio.EliminarPersona(identificacion);

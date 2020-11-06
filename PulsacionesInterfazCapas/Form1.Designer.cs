@@ -44,7 +44,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CmbModificar = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
             this.TextBuscar = new System.Windows.Forms.TextBox();
             this.LbnlIdentificacion = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.TxtCampo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DtgTodos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -191,7 +192,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(717, 195);
+            this.button5.Location = new System.Drawing.Point(614, 284);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 15;
@@ -209,17 +210,21 @@
             this.label6.Text = "Modificar";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // comboBox1
+            // CmbModificar
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(578, 197);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 17;
+            this.CmbModificar.FormattingEnabled = true;
+            this.CmbModificar.Items.AddRange(new object[] {
+            "SELECCIONE",
+            "Nombre",
+            "Edad"});
+            this.CmbModificar.Location = new System.Drawing.Point(578, 197);
+            this.CmbModificar.Name = "CmbModificar";
+            this.CmbModificar.Size = new System.Drawing.Size(121, 21);
+            this.CmbModificar.TabIndex = 17;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(717, 231);
+            this.button6.Location = new System.Drawing.Point(432, 117);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 18;
@@ -333,11 +338,19 @@
             this.label17.TabIndex = 30;
             this.label17.Text = "Pulsacion";
             // 
+            // TxtCampo
+            // 
+            this.TxtCampo.Location = new System.Drawing.Point(589, 238);
+            this.TxtCampo.Name = "TxtCampo";
+            this.TxtCampo.Size = new System.Drawing.Size(100, 20);
+            this.TxtCampo.TabIndex = 31;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TxtCampo);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
@@ -351,7 +364,7 @@
             this.Controls.Add(this.LbnlIdentificacion);
             this.Controls.Add(this.TextBuscar);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CmbModificar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -394,7 +407,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CmbModificar;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox TextBuscar;
         private System.Windows.Forms.Label LbnlIdentificacion;
@@ -408,6 +421,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox TxtCampo;
     }
 }
 
