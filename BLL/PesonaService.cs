@@ -34,9 +34,19 @@ namespace BLL
             return personas;
         }
 
-        public int BuscarxIdentificacion(string identificacion)
+        public int ValidarExiste(string identificacion)
         {
-            return _repositorio.BuscarPorIdentificacion(identificacion); ;
+            return _repositorio.ValidarExiste(identificacion); ;
+        }
+
+        public Persona ConsultarPersona(string identificaion)
+        {
+            return _repositorio.ConsultarPersona(identificaion);
+        }
+
+        public void EliminarPersona(string identificacion)
+        {
+            _repositorio.EliminarPersona(identificacion);
         }
         /*public string Eliminar(string identificacion)
         {

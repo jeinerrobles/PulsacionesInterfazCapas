@@ -79,10 +79,10 @@ namespace PulsacionesInterfazCapas
                 Nombre = TxtNombre.Text
             };
 
-            if(personaService.BuscarxIdentificacion(persona.Identificacion) == 0)
+            if(personaService.ValidarExiste(persona.Identificacion) == 0)
             {
-                personaService.Guardar(persona);
-                MessageBox.Show("Persona Registrada.");
+                GuardarPersonaResponse personaRegistrada = personaService.Guardar(persona);
+                MessageBox.Show("Persona Registrada. Su pulsacion es: "+personaRegistrada.Persona.Pulsacion.ToString());
             }
             else
             {
@@ -99,6 +99,75 @@ namespace PulsacionesInterfazCapas
         private void button2_Click(object sender, EventArgs e)
         {
             DtgTodos.DataSource = null;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ValidarBuscar();
+        }
+
+        private void ValidarBuscar()
+        {
+            if(TextBuscar.Text.Trim() == "")
+            {
+                MessageBox.Show("Dijite la identificacion de la persona a buscar.");
+            }
+            else
+            {
+                Buscar();
+            }
+        }
+
+        private void Buscar()
+        {
+            Persona personaEncontrada = personaService.ConsultarPersona(TextBuscar.Text);
+            if(personaEncontrada == null)
+            {
+                MessageBox.Show("No existe una persona registrada con esta identificacion.");
+            }
+            else
+            {
+
+                LblEdad.Text = personaEncontrada.Edad.ToString();
+                LblNombres.Text = personaEncontrada.Nombre;
+                LblPulsacion.Text = personaEncontrada.Pulsacion.ToString();
+                LblSexo.Text = personaEncontrada.Sexo;
+                LbnlIdentificacion.Text = personaEncontrada.Identificacion;
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Persona personaEncontrada = personaService.ConsultarPersona(TextBuscar.Text);
+            if (personaEncontrada == null)
+            {
+                MessageBox.Show("No existe una persona registrada con esta identificacion.");
+            }
+            else
+            {
+                personaService.EliminarPersona(TextBuscar.Text);
+                MessageBox.Show("Persona eliminada.");
+                LblEdad.Text = "";
+                LblNombres.Text = "";
+                LblPulsacion.Text = "";
+                LblSexo.Text = "";
+                LbnlIdentificacion.Text = "";
+            }
+        }
+
+        private void DvgConsultar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

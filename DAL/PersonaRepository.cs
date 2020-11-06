@@ -19,17 +19,32 @@ namespace DAL
         {
             _personas.Add(persona);
         }
-        public void Eliminar(Persona persona)
-        {
-            
-        }
+
         public List<Persona> ConsultarTodos()
         {
             return _personas;
         }
-        public int BuscarPorIdentificacion(string identificacion)
+        public int ValidarExiste(string identificacion)
         {
             return _personas.Where(p => p.Identificacion.Equals(identificacion)).Count();
+        }
+
+        public Persona ConsultarPersona(string identificaion)
+        {
+            foreach(Persona p in _personas)
+            {
+                if (p.Identificacion.Equals(identificaion))
+                {
+                    return p;
+                }
+            }
+            return null;
+        }
+
+        public void EliminarPersona(string identificacion)
+        {
+            Persona personaEncontrada = ConsultarPersona(identificacion);
+            _personas.Remove(personaEncontrada);
         }
        
         public int TotalizarHombres()
